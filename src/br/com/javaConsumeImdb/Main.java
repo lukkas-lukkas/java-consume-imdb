@@ -1,5 +1,7 @@
 package br.com.javaConsumeImdb;
 
+import com.google.gson.Gson;
+
 import br.com.javaConsumeImdb.Infrastructure.Http.IMDbHttpRequest;
 
 public class Main {
@@ -8,6 +10,7 @@ public class Main {
 		IMDbHttpRequest request = new IMDbHttpRequest();
 		
 		try {
+			Gson gson = new Gson();
 			String result = request.search();
 			
 			System.out.println("Filmes encontrados com sucesso.");
