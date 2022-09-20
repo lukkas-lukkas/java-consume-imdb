@@ -13,7 +13,7 @@ public class MovieRepository {
 	public List<Movie> getTop250Movies() throws Exception {
 		String result = request.getTop250Movies();
 		
-		return IMDbResponseMapper.parse(result);
+		return IMDbResponseMapper.map(result);
 	}
 
 }
