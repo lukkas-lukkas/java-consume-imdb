@@ -6,6 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse.BodyHandlers;
 
 public class IMDbHttpRequest {
+	private String urlBase = "https://imdb-api.com/en/API/Top250Movies/%s";
 	private String apiKey = System.getenv("IMDB_API_KEY");
 	
 	private HttpClient client;
@@ -20,14 +21,14 @@ public class IMDbHttpRequest {
 				.build();
 	}
 
-	public String search() throws Exception {
+	public String getTop250Movies() throws Exception {
 		return client
 				.send(request, BodyHandlers.ofString())
 				.body();
 	}
 	
 	private URI getURI() {
-		String stringUri = "https://imdb-api.com/en/API/Top250Movies/" + this.apiKey;
+		String stringUri = this.urlBase.formatted(this.apiKey);
 		
 		return URI.create(stringUri);
 	}
