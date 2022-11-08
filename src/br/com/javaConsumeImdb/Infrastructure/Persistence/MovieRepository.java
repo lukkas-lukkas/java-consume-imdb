@@ -1,4 +1,4 @@
-package br.com.javaConsumeImdb.Repository;
+package br.com.javaConsumeImdb.Infrastructure.Persistence;
 
 import java.util.List;
 

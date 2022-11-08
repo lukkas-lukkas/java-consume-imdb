@@ -1,6 +1,6 @@
-package br.com.javaConsumeImdb;
+package br.com.javaConsumeImdb.Application;
 
-import br.com.javaConsumeImdb.Repository.MovieRepository;
+import br.com.javaConsumeImdb.Infrastructure.Persistence.MovieRepository;
 
 public class Main {
 
